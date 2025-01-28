@@ -1,0 +1,36 @@
+{
+  "name": "lekhapadi",
+  "version": "1.0.0",
+  "description": "A blogging platform for bloggers and readers.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "watch:css": "tailwindcss -i ./src/public/css/input_tailwind.css -o ./src/public/css/output_tailwind.css --watch",
+    "dev": "concurrently \"npm run start\" \"npm run watch:css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.17",
+    "connect-mongo": "^5.1.0",
+    "dompurify": "^3.1.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.5.0",
+    "express-session": "^1.18.0",
+    "jsdom": "^24.1.0",
+    "marked": "^13.0.2",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "tailwindcss": "^3.4.1"
+  }
+}
