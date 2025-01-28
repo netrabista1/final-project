@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In Form</title>
+    <%- include('all_css_js') -%>
+
+    <style>
+      .password-toggle-icon {
+        top: 70%;
+        transform: translateY(-50%);
+      }
+
+      body {
+        background: url(/images/loginBG.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+
+    <script src="/js/login.js"></script>
+  </head>
+
+  <body class="flex justify-center items-center min-h-screen bg-gray-50">
+    <div
+      class="w-full max-w-md px-12 py-8 bg-white/[.95] rounded-lg shadow-lg"
+      data-aos="zoom-out"
+      data-aos-delay="500"
+    >
+      <section>
+        <h1
+          class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl"
+          data-aos="zoom-in-right"
+          data-aos-delay="800"
+        >
+          Sign In
+        </h1>
+        <br />
+        <form action="login" method="post" class="lato">
+          <div data-aos="zoom-in-right" data-aos-delay="900">
+            <label
+              for="username"
+              class="block mb-1 text-sm font-semibold text-gray-900"
+              >Username</label
+            >
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="bg-gray-200 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
+              placeholder="johndoe"
+              required
+            />
+            <span
+              class="block mb-1 text-sm text-red-700"
+              id="username-error-msg"
+            ></span>
+          </div>
+          <div class="mt-4" data-aos="zoom-in-right" data-aos-delay="1000">
+            <label
+              for="password"
+              class="block mb-1 text-sm font-bold text-gray-900"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="••••••••"
+              class="bg-gray-200 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 pr-10"
+              required
+            />
+            <span
+              class="block mb-3 text-sm text-red-700"
+              id="pwd-error-msg"
+            ></span>
+            <span
+              id="togglePassword"
+              class="password-toggle-icon absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-gray-700 dark:text-gray-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 23 23"
+                stroke-width="2"
+                stroke="#c2c2c2"
+                width="15"
+                height="15"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            class="flex items-center justify-end"
+            data-aos="zoom-in-right"
+            data-aos-delay="1000"
+          >
+            <div class="forgotpwd">
+              <a
+                href="#"
+                class="text-sm font-light text-gray-700 hover:underline"
+                >Forgot Password?</a
+              >
+            </div>
+          </div>
+          <div
+            class="mt-4 flex justify-center"
+            data-aos="zoom-in-right"
+            data-aos-delay="1100"
+          >
+            <button
+              type="submit"
+              class="bg-primary w-2/6 text-white bg-blue-600 font-medium rounded-lg text-sm px-4 py-2 transition ease-in-out hover:scale-110"
+            >
+              Login
+            </button>
+          </div>
+          <p
+            class="text-sm font-light text-gray-500 mt-4"
+            data-aos="zoom-in-right"
+            data-aos-delay="1200"
+          >
+            Don’t have an account yet?
+            <a href="/signup" class="font-medium text-blue-600 hover:underline"
+              >Sign up</a
+            >
+          </p>
+        </form>
+        <div
+          class="mt-4 flex justify-center"
+          data-aos="zoom-in-right"
+          data-aos-delay="1300"
+        >
+          <a
+            href="/"
+            class="text-gray-800 font-medium rounded-lg text-sm px-4 py-2 flex justify-center items-center underline hover:bg-gray-200/[.5] transition ease-in-out hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="black"
+                d="m12 5.561l-7 5.6V19h5v-4h4v4h5v-7.358a1 1 0 0 0-.375-.781zM12 3l7.874 6.3A3 3 0 0 1 21 11.641V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7.839A2 2 0 0 1 3.75 9.6z"
+              ></path>
+            </svg>
+            Back to Home
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

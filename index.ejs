@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LekhaPadi</title>
+    <%- include('all_css_js') -%>
+    <link rel="stylesheet" href="/css/landing.css" />
+
+    <script src="/js/index.js" defer></script>
+  </head>
+  <body>
+    <div><%- include('navbar') -%></div>
+
+    <div class="flex my-5 px-4">
+      <div class="left lg:w-4/6 w-full">
+        <div class="w-full"><%- include('carousel') -%></div>
+        <div class="s-title mt-4" data-aos="zoom-in-right" data-aos-delay="400">
+          <h3
+            class="inline-block text-xl sm:text-xl font-extrabold text-slate-900 tracking-tight mb-0"
+          >
+            Recent Blogs
+          </h3>
+        </div>
+        <div class="text-gray-600 body-font pt-5 grid grid-cols-1">
+          <%- include('recent') -%>
+        </div>
+      </div>
+      <div class="right w-2/6 hidden md:block">
+        <div><%- include('popular') -%></div>
+      </div>
+    </div>
+  </body>
+</html>
